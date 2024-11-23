@@ -1,11 +1,11 @@
 
 services:
    
-    restful-flask-apl-hello-universe:
+    flask-rest-apl-proving-grounds:
 
-        container_name: restful-flask-apl-hello-universe
+        container_name: flask-rest-apl-proving-grounds
 
-        image: softwareshinobi/restful-flask-apl-hello-universe
+        image: softwareshinobi/flask-rest-apl-proving-grounds
 
         build: 
 
