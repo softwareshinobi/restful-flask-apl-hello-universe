@@ -7,7 +7,7 @@ set -e
 
 set -x
 
-sudo apt install -f python3-pip
+sudo apt install -y python3-pip
 
 pip install -r requirements.txt   
 
