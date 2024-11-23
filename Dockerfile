@@ -1,22 +1,17 @@
-FROM ubuntu
+# Use an official Python runtime as the base image
+FROM python:3.8-slim
 
-## install python3
+# Set the working directory in the container to /app
+WORKDIR /app
 
-RUN set -xe \
-    && apt-get update \
-    && apt-get install -y python3 \
-    && apt-get install -y python3-pip
+# Copy the current directory (our Flask app) into the container at /app
+COPY . /app
 
-## install rytr api situation
+# Install Flask and other dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
-RUN set -xe \
-    && pip install flask_cors \
-    && pip install flask
+# Make port 5000 available for the app
+EXPOSE 5000
 
-## Add The Python/Flask Files
-
-ADD . /
-
-## On Container start, run the Python API file
-
-CMD ["python3", "app.py"]
+# Run the command to start the Flask app
+CMD ["flask", "run", "--host=0.0.0.0"]
