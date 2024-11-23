@@ -11,8 +11,8 @@ def hello():
 def multiply(num1, num2):
 
     result = num1 * num2
-    return result
-##    return jsonify({'result': result})
+
+    return jsonify({'product': result})
 
 @app.route('/process', methods=['POST'])
 def process_data():
