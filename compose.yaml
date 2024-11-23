@@ -1,11 +1,11 @@
 
 services:
    
-    python3-flask-apl-hello-world:
+    restful-flask-apl-hello-universe:
 
-        container_name: python3-flask-apl-hello-world
+        container_name: restful-flask-apl-hello-universe
 
-        image: softwareshinobi/python3-flask-apl-hello-world
+        image: softwareshinobi/restful-flask-apl-hello-universe
 
         build: 
 
